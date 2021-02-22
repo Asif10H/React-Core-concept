@@ -1,40 +1,32 @@
 import './App.css';
 
 function App() {
-  //var name = "Dr. Mahfuz";
-  var person1 = {
-    name: "Dr. Mahfuz",
-    job: "singer"
-  }
-  var person2 = {
-    name: "Eva Rahman",
-    job: "Kokil Kondi"
-  }
-  var style={
-    color: 'red',
-    backgroundColor: 'yellow'
-  }
+  const nayoks = ['Anwar', 'Jafor', 'Alomgir', 'Salman']
   return (
     <div className="App">
       <header className="App-header">
         <p>I am a React Person.</p>
-        <Person></Person>
-        <Person></Person>
-        <Person></Person>
+        <Person name="Rubel Nayok" nayika="Moushumi"></Person>
+        <Person name="Jasim" nayika="Shabana"></Person>
+        <Person name="BappaRaz" nayika="Cheka"></Person>
+        <Person name="Elias K" nayika="Bobita"></Person>
       </header>
     </div>
   );
 }
-function Person(){
+function Person(props){
   const personStyle={
-    border: '2px solid red',
-    margin: '10px'
+    border: '2px solid tomato',
+    margin: '10px',
+    height:'200px',
+    width:'500px'
   }
+  console.log(props);
   // style={{border: '2px solid red', margin: '10px'}}
   return (
   <div style={personStyle}>
-      <h1>Name: Sakaib Al Hasan</h1>
-      <h3>Hero of the year</h3>
+      <h1>Nayok: {props.name}</h1>
+      <h3>Hero of  {props.nayika}</h3>
   </div>
   )
 }

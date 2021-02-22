@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>I am a React Person.</p>
-        <Person name="Nayon" profession="Front-End developer"></Person>
+        <Person name="Nayon" job="Front-End developer"></Person>
         <Person name="Jahid Hasan" job="Back-End developer"></Person>
         <Person name="Md.Jahid" job="Data Scientist"></Person>
       </header>
@@ -23,7 +23,7 @@ function Person(props){
   return (
   <div style={personStyle}>
       <h3>My Name: {props.name} </h3>
-      <p>My Profession: {props.profession}</p>
+      <p>My Profession: {props.job}</p>
   </div>
   )
 }

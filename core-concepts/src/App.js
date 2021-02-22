@@ -3,10 +3,10 @@ import './App.css';
 function App() {
   const nayoks = ['Anwar', 'Jafor', 'Alomgir', 'Salman']
   const products = [
-    {name: 'Photoshop', price: '$20.99'},
-    {name: 'Premiere Pro', price: '$20.99'},
-    {name: 'Premiere Rush', price: '$9.99'},
-    {name: 'Premiere Rush', price: '$9.99'}
+    {name: 'Photoshop', price: '$20.99/mo'},
+    {name: 'Premiere Pro', price: '$20.99/mo'},
+    {name: 'Premiere Rush', price: '$9.99/mo'},
+    {name: 'Premiere Rush', price: '$9.99/mo'}
   ]
   return (
     <div className="App">
@@ -35,11 +35,11 @@ function Product(props){
     float: 'left'
   }
   const {name, price} = props.product;
-  console.log(name, price);
+  // console.log(name, price);
   return(
     <div style={productStyle}>
-        <h3>{props.product.name}</h3>
-        <h5>{props.product.price}</h5>
+        <h3>{name}</h3>
+        <h5>{price}</h5>
         <button>Buy Now</button>
     </div>
   )

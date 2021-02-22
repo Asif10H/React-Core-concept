@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>I am a React Person.</p>
-        <Product name={products[0].name} price={products[0].price}></Product>
-        <Product name={products[1].name} price={products[1].price}></Product>
-        <Product name={products[2].name} price={products[2].price}></Product>
-        <Product name={products[3].name} price={products[3].price}></Product>
+        <Product product={products[0]}></Product>
+        <Product product={products[1]}></Product>
+        <Product product={products[2]}></Product>
+        <Product product={products[3]}></Product>
         <Person name="Nayon" job="Front-End developer"></Person>
         <Person name="Jahid Hasan" job="Back-End developer"></Person>
         <Person name="Md.Jahid" job="Data Scientist"></Person>
@@ -29,14 +29,17 @@ function Product(props){
     border: '1px solid gray',
     borderRadius: '5px',
     backgroundColor: 'lightgray',
+    margin: '10px',
     height: '200px',
     width: '300px',
     float: 'left'
   }
+  const {name, price} = props.product;
+  console.log(name, price);
   return(
     <div style={productStyle}>
-        <h3>{props.name}</h3>
-        <h5>{props.price}</h5>
+        <h3>{props.product.name}</h3>
+        <h5>{props.product.price}</h5>
         <button>Buy Now</button>
     </div>
   )

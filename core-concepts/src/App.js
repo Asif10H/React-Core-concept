@@ -1,5 +1,4 @@
 import './App.css';
-import logo from './logo.svg';
 
 function App() {
   //var name = "Dr. Mahfuz";
@@ -18,18 +17,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit done <code>src/App.js</code> and save to reload.
-        </p>
-        <p>My first React Paragraph</p>
-        <p style={style}>My second React Paragraph</p>
-        <h2>my heading {44+33+3-66}</h2>
-        <h2 className="" style={style}>My heading {person1.name +" "+ person1.job}</h2>
-        <h3 style={{ color: 'green',backgroundColor: 'tomato'}}>Singer: {person2.name +" "+ person2.job}</h3>
+        <p>I am a React Person.</p>
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
       </header>
     </div>
   );
 }
-
+function Person(){
+  const personStyle={
+    border: '2px solid red',
+    margin: '10px'
+  }
+  // style={{border: '2px solid red', margin: '10px'}}
+  return (
+  <div style={personStyle}>
+      <h1>Name: Sakaib Al Hasan</h1>
+      <h3>Hero of the year</h3>
+  </div>
+  )
+}
 export default App;

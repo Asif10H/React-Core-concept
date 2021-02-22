@@ -6,10 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>I am a React Person.</p>
-        <Person name="Rubel Nayok" nayika="Moushumi"></Person>
-        <Person name="Jasim" nayika="Shabana"></Person>
-        <Person name="BappaRaz" nayika="Cheka"></Person>
-        <Person name="Elias K" nayika="Bobita"></Person>
+        <Person name="Nayon" profession="Front-End developer"></Person>
+        <Person name="Jahid Hasan" job="Back-End developer"></Person>
+        <Person name="Md.Jahid" job="Data Scientist"></Person>
       </header>
     </div>
   );
@@ -21,12 +20,10 @@ function Person(props){
     height:'200px',
     width:'500px'
   }
-  console.log(props);
-  // style={{border: '2px solid red', margin: '10px'}}
   return (
   <div style={personStyle}>
-      <h1>Nayok: {props.name}</h1>
-      <h3>Hero of  {props.nayika}</h3>
+      <h3>My Name: {props.name} </h3>
+      <p>My Profession: {props.profession}</p>
   </div>
   )
 }

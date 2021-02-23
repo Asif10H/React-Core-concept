@@ -11,6 +11,17 @@ function App() {
   ]
   // const nayokNames = nayoks.map(nayok => nayok);
   // console.log(nayokNames);
+
+  //cse 45
+  const friends = [
+    {name: 'Sifat', id: 'C173013'},
+    {name: 'jowel', id: 'C173016'},
+    {name: 'Tomal', id: 'C173027'},
+    {name: 'Jahid', id: 'C173006'},
+    {name: 'Jishan', id: 'C173084'},
+    {name: 'Hasib', id: 'C173086'},
+
+  ]
   return (
     <div className="App">
       <header className="App-header">
@@ -24,12 +35,12 @@ function App() {
             }
         </ul>
         {
-          products.map(product => <Product product={product}></Product>)
+          products.map(pd => <Product product={pd}></Product>)
         }
-        {/* <Product product={products[0]}></Product>
-        <Product product={products[1]}></Product>
-        <Product product={products[2]}></Product>
-        <Product product={products[3]}></Product> */}
+        {/* cse 45 */}
+        {
+          friends.map(fd => <Friend friend={fd}></Friend>)
+        }
         <Person name="Nayon" job="Front-End developer"></Person>
         <Person name="Jahid Hasan" job="Back-End developer"></Person>
         <Person name="Md.Jahid" job="Data Scientist"></Person>
@@ -37,7 +48,27 @@ function App() {
     </div>
   );
 }
-
+// cse 45 
+function Friend(props){
+  console.log(props);
+  const friendStyle={
+    borderRadius: '10px',
+    boxShadow: '10px 10px 20px tomato',
+    backgroundColor: 'lightgray',
+    margin: '10px',
+    height: '300px',
+    width: '500px',
+  }
+  const {name, id} = props.friend;
+  return(
+        <div style={friendStyle}>
+          <h1>Name: {name}</h1>
+          <h2>ID: {id}</h2>
+            {/* <h1>Name: {props.friend.name}</h1>
+            <h2>ID: {props.friend.id}</h2> */}
+        </div>
+  )
+}
 function Product(props){
   const productStyle={
     border: '1px solid gray',

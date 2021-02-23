@@ -23,10 +23,13 @@ function App() {
               products.map(product => <li>{product.name + " " + product.price}</li>)
             }
         </ul>
-        <Product product={products[0]}></Product>
+        {
+          products.map(product => <Product product={product}></Product>)
+        }
+        {/* <Product product={products[0]}></Product>
         <Product product={products[1]}></Product>
         <Product product={products[2]}></Product>
-        <Product product={products[3]}></Product>
+        <Product product={products[3]}></Product> */}
         <Person name="Nayon" job="Front-End developer"></Person>
         <Person name="Jahid Hasan" job="Back-End developer"></Person>
         <Person name="Md.Jahid" job="Data Scientist"></Person>

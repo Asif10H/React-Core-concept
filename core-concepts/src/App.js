@@ -6,7 +6,8 @@ function App() {
     {name: 'Photoshop', price: '$20.99/mo'},
     {name: 'Premiere Pro', price: '$20.99/mo'},
     {name: 'Premiere Rush', price: '$9.99/mo'},
-    {name: 'Premiere Rush', price: '$9.99/mo'}
+    {name: 'Adobe Stock', price: '$22.99/mo'},
+    {name: 'PDF Reader', price: '$2.99/mo'}
   ]
   // const nayokNames = nayoks.map(nayok => nayok);
   // console.log(nayokNames);
@@ -17,6 +18,9 @@ function App() {
         <ul>
             {
               nayoks.map(nayok => <li>{nayok}</li>)
+            }
+            {
+              products.map(product => <li>{product.name + " " + product.price}</li>)
             }
         </ul>
         <Product product={products[0]}></Product>

@@ -8,10 +8,18 @@ function App() {
     {name: 'Premiere Rush', price: '$9.99/mo'},
     {name: 'Premiere Rush', price: '$9.99/mo'}
   ]
+  // const nayokNames = nayoks.map(nayok => nayok);
+  // console.log(nayokNames);
   return (
     <div className="App">
       <header className="App-header">
         <p>I am a React Person.</p>
+        <ul>
+            <li>{nayoks[0]}</li>
+            <li>{nayoks[1]}</li>
+            <li>{nayoks[2]}</li>
+            <li>{nayoks[3]}</li>
+        </ul>
         <Product product={products[0]}></Product>
         <Product product={products[1]}></Product>
         <Product product={products[2]}></Product>

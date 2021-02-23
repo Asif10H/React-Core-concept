@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>I am a React Person.</p>
+        <Counter></Counter>
         <ul>
             {
               nayoks.map(nayok => <li>{nayok}</li>)
@@ -47,6 +49,21 @@ function App() {
       </header>
     </div>
   );
+}
+// counter
+function Counter(){
+  const [count, setCount] =  useState(0);
+  // const handleIncrease = () => console.log('clicked');
+  const handleIncrease = () => {
+    const newCount = count + 1;
+    setCount(newCount)
+  };
+  return(
+    <div>
+      <h1>Counter : {count}</h1>
+      <button onClick = {handleIncrease}>Increase</button>
+    </div>
+  )
 }
 // cse 45 
 function Friend(props){

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+
 
 function App() {
   const nayoks = ['Anwar', 'Jafor', 'Alomgir', 'Salman']
@@ -28,6 +30,7 @@ function App() {
       <header className="App-header">
         <p>I am a React Person.</p>
         <Counter></Counter>
+        <Users></Users>
         <ul>
             {
               nayoks.map(nayok => <li>{nayok}</li>)
@@ -65,6 +68,31 @@ function Counter(){
     </div>
   )
 }
+
+//user
+function Users(){
+  const [users, setUsers] =  useState([]);
+  
+  useEffect(() => {
+    // console.log('caling effect');
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    // .then(data => console.log(data));
+    .then(data => setUsers(data));
+  }, []) 
+  return(
+    <div>
+        <h3>Dynamic Users: {users.length}</h3>
+        <ul>
+          {
+            users.map(user => <li>{user.name}</li>)
+          }
+        </ul>
+    </div>
+  )
+}
+
+
 // cse 45 
 function Friend(props){
   console.log(props);

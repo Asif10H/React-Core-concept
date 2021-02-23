@@ -60,7 +60,7 @@ function Counter(){
     <div>
       <h1>Counter : {count}</h1>
       
-      <button onClick = {handleIncrease}>Increase</button>
+      <button onMouseMove = {handleIncrease}>Increase</button>
       <button onClick = {() => setCount(count - 1)}>Decrease</button>
     </div>
   )

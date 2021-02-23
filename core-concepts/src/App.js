@@ -54,10 +54,8 @@ function App() {
 function Counter(){
   const [count, setCount] =  useState(0);
   // const handleIncrease = () => console.log('clicked');
-  const handleIncrease = () => {
-    const newCount = count + 1;
-    setCount(newCount)
-  };
+  const handleIncrease = () => setCount(count + 1);  
+   // const newCount = count + 1;
   return(
     <div>
       <h1>Counter : {count}</h1>
@@ -70,8 +68,8 @@ function Friend(props){
   console.log(props);
   const friendStyle={
     borderRadius: '10px',
-    boxShadow: '10px 10px 20px tomato',
-    backgroundColor: 'lightgray',
+    boxShadow: '10px 10px 20px #A5D6A7',
+    backgroundColor: '#66BB6A',
     margin: '10px',
     height: '300px',
     width: '500px',
